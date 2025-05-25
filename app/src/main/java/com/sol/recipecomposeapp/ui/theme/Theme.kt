@@ -8,16 +8,15 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
 private val RecipesAppLightColorScheme = lightColorScheme(
     primary = PrimaryColor,
-    onPrimary = Color.White,
+    onPrimary = TextPrimaryColor,
     secondary = AccentBlue,
-    onSecondary = Color.White,
+    onSecondary = TextSecondaryColor,
     tertiary = AccentColor,
-    onTertiary = Color.White,
+    onTertiary = TextSecondaryColor,
 
     background = BackgroundColor,
     onBackground = TextPrimaryColor,
@@ -30,11 +29,11 @@ private val RecipesAppLightColorScheme = lightColorScheme(
 
 private val RecipesAppDarkColorScheme = darkColorScheme(
     primary = PrimaryColorDark,
-    onPrimary = Color.Black,
+    onPrimary = TextPrimaryColorDark,
     secondary = AccentBlueDark,
-    onSecondary = Color.Black,
+    onSecondary = TextPrimaryColorDark,
     tertiary = AccentColorDark,
-    onTertiary = Color.Black,
+    onTertiary = TextSecondaryColorDark,
 
     background = BackgroundColorDark,
     onBackground = TextPrimaryColorDark,
