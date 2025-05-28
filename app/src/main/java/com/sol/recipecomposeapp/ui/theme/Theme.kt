@@ -10,26 +10,38 @@ import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+private val RecipesAppLightColorScheme = lightColorScheme(
+    primary = PrimaryColor,
+    onPrimary = TextPrimaryColor,
+    secondary = AccentBlue,
+    onSecondary = TextSecondaryColor,
+    tertiary = AccentColor,
+    onTertiary = TextSecondaryColor,
+
+    background = BackgroundColor,
+    onBackground = TextPrimaryColor,
+    surface = SurfaceColor,
+    onSurface = TextPrimaryColor,
+    surfaceVariant = SurfaceVariantColor,
+    onSurfaceVariant = TextSecondaryColor,
+    outline = DividerColor
 )
 
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
+private val RecipesAppDarkColorScheme = darkColorScheme(
+    primary = PrimaryColorDark,
+    onPrimary = TextPrimaryColorDark,
+    secondary = AccentBlueDark,
+    onSecondary = TextPrimaryColorDark,
+    tertiary = AccentColorDark,
+    onTertiary = TextSecondaryColorDark,
 
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    background = BackgroundColorDark,
+    onBackground = TextPrimaryColorDark,
+    surface = SurfaceColorDark,
+    onSurface = TextPrimaryColorDark,
+    surfaceVariant = SurfaceVariantColor,
+    onSurfaceVariant = TextSecondaryColorDark,
+    outline = DividerColor
 )
 
 @Composable
@@ -45,8 +57,8 @@ fun RecipeAppTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
+        darkTheme -> RecipesAppDarkColorScheme
+        else -> RecipesAppLightColorScheme
     }
 
     MaterialTheme(
