@@ -15,6 +15,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.sol.recipecomposeapp.ui.categories.CategoriesScreen
 import com.sol.recipecomposeapp.ui.navigation.BottomNavigation
 
 @Composable
@@ -33,24 +34,9 @@ fun RecipeApp() {
         }
     ) { innerPadding ->
         when (currentScreen) {
-            ScreenId.CATEGORIES -> CategoryScreen(innerPadding)
+            ScreenId.CATEGORIES -> CategoriesScreen(innerPadding)
             ScreenId.FAVORITES -> FavoriteScreen(innerPadding)
         }
-    }
-}
-
-@Composable
-fun CategoryScreen(innerPadding: PaddingValues) {
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(innerPadding),
-        contentAlignment = Alignment.Center
-    ) {
-        Text(
-            text = "CategoryScreen",
-            style = MaterialTheme.typography.titleSmall
-        )
     }
 }
 
