@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">RecipeComposeApp</string>
     <string name="categories">Категории</string>
+    <string name="none_added_to_favorites">Вы еще не добавили ни одного рецепта в избранное</string>
+    <string name="fovorite">Избранное</string>
+    <string name="recipes">Рецепты</string>
 </resources>
