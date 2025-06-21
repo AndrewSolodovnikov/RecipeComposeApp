@@ -77,10 +77,6 @@ object RecipesRepositoryStub {
     }
 
     fun getRecipesByCategoryId(categoryId: Int): List<RecipeDto> {
-        return if (categoryId == 0) {
-            recipes
-        } else {
-            emptyList()
-        }
+        return if (categoryId == 0) recipes else emptyList()
     }
 }
